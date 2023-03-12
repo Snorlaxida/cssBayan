@@ -1,0 +1,118 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+	line-height: 1.5;
+
+	color: blue;
+	font-weight: 800;
+}
+
+@media(max-width: 1920px){
+	body{
+		font-size: 20px;
+	}
+}
+
+@media(max-width: 820px){
+	body{
+		font-size: 15px;
+	}
+}
+@media(max-width: 320px){
+	body{
+			font-size: 9px;
+	}
+}
+@media(hover:hover)
+{
+	.bayan:hover {
+		color: black;
+	}
+	.bayan:hover > .bayan-item > .item-title > .plus{
+		display: block;
+	}
+	.bayan-item:hover > .vahui > .bayan-img {
+		transition: 1s;
+		max-height: 20em;
+	}
+	.bayan-item:hover > .item-title > .plus {
+		transform:rotate(45deg);
+	}
+	
+}
+
+
+
+img {
+	display: block;
+	margin: 0 auto;
+	max-width: 10em;
+	max-height: 10em;
+	padding: 1em;
+}
+
+h1 {
+	color: black;
+}
+
+.bayan {
+	max-width: 25em;
+	margin: 1em auto;
+}
+
+.bayan-item {
+	border-top: 0.01em solid #b91125;
+}
+
+.bayan-item:active{
+	opacity: 0.6;
+}
+
+.item-title {
+	display: block;
+	padding: 0.7em 0;
+	position: relative;
+	cursor: pointer;
+}
+
+.bayan-img {
+	overflow: hidden;
+	transition: 0.5s;
+	max-height: 0;
+	cursor: pointer;
+}
+
+
+.bayan-input:checked ~ .vahui > .bayan-img{
+	transition: 1s;
+	max-height: 20em;
+}
+
+.bayan-input:checked ~ .item-title{
+	color: black;
+}
+
+.bayan-item:active > .item-title{
+	color: blue;
+}
+
+.bayan-input {
+	width: 0;
+	height: 0;
+	appearance: none;
+	position: absolute;
+}
+
+.plus {
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.2em;
+	display: none;
+}
+
+.bayan-input:checked ~ .item-title > .plus {
+  transform:rotate(45deg);
+}
+
